@@ -21,7 +21,7 @@ public class ElementsMainPage {
         return copyrights.isDisplayed();
     }
     public boolean isContactsDisplayed() {
-        WebElement contacts = driver.findElement(By.cssSelector(".tel"));
+        WebElement contacts = driver.findElement(By.cssSelector(".telll"));
         return contacts.isDisplayed();
     }
 }
