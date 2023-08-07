@@ -24,14 +24,14 @@ services:
       - jenkins_data:/var/jenkins_home
     depends_on:
       - selenium-hub
-  allure:
-    image: frankescobar/allure-docker-service
-    container_name: allure
-    ports:
-      - "5050:5050"
-    volumes:
-      - allure_reports:/allure-results
-    command: ["allure", "serve", "/allure-results"]
+#  allure:
+#    image: frankescobar/allure-docker-service
+#    container_name: allure
+#    ports:
+#      - "5050:5050"
+#    volumes:
+#      - allure_reports:/allure-results
+#    command: ["allure", "serve", "/allure-results"]
 
 volumes:
   jenkins_data:
