@@ -17,7 +17,6 @@ public class ElementsMainPageTests {
     @BeforeMethod
     public void setup() {
         driver.get("https://atlant-shop.com.ua/uk");
-
     }
     @Test
     public void logoPresence(){
