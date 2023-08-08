@@ -1,13 +1,16 @@
 package frontend.mainPage;
 
-import frontend.BaseTest;
+import frontend.core.DriverSingleton;
 import frontend.discountPage.ElementsDiscountPage;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class ElementsMenuItemTests extends BaseTest {
+public class ElementsMenuItemTests {
+    protected static WebDriver driver = DriverSingleton.getDriver();
     private final ElementsMenuItem elementsMenuItem = new ElementsMenuItem();
     private final ElementsDiscountPage elementsDiscountPage = new ElementsDiscountPage();
 
@@ -21,6 +24,9 @@ public class ElementsMenuItemTests extends BaseTest {
         assertTrue(elementsDiscountPage.getTitle().isDisplayed(), "Сторінка 'Акції' не завантажилась");
 
     }
-
+    @AfterClass
+    public static void tearDown() {
+        DriverSingleton.quitDriver();
+    }
 
 }
