@@ -1,6 +1,6 @@
 package frontend.mainPage;
 
-import frontend.core.BaseTest;
+import frontend.BaseTest;
 import frontend.discountPage.ElementsDiscountPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
