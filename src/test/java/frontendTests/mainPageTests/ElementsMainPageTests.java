@@ -1,17 +1,16 @@
-package frontend.mainPage;
+package frontendTests.mainPageTests;
 
-import frontend.core.DriverSingleton;
 import frontend.core.scrolls.ScrollToEnd;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
+import frontend.mainPage.ElementsMainPage;
+import frontendTests.BaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
 
-public class ElementsMainPageTests {
-    protected static WebDriver driver = DriverSingleton.getDriver();
+public class ElementsMainPageTests extends BaseTest {
+
     private final ElementsMainPage elementsMainPage = new ElementsMainPage();
 
     @BeforeMethod
@@ -31,10 +30,6 @@ public class ElementsMainPageTests {
     public void contactsPresence(){
         new ScrollToEnd();
         assertTrue(elementsMainPage.isContactsDisplayed(), "Контактний телефон відсутній");
-    }
-    @AfterClass
-    public static void tearDown() {
-        DriverSingleton.quitDriver();
     }
 }
 

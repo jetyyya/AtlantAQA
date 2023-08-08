@@ -9,7 +9,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Duration;
 
 public class DriverSingleton {
     private static WebDriver driver;
@@ -33,8 +32,6 @@ public class DriverSingleton {
                 }
             } else {
                 driver = new ChromeDriver();
-                driver.manage().window().maximize();
-                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)).pageLoadTimeout(Duration.ofSeconds(10));
             }
         }
         return driver;
