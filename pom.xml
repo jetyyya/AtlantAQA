@@ -72,20 +72,19 @@
                     <reportVersion>2.14.0</reportVersion>
                 </configuration>
             </plugin>
-                        <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                             <version>3.1.2</version>
-                             <configuration>
-                                    <skipTests>false</skipTests>
-                                    <testFailureIgnore>true</testFailureIgnore>
-<!--                                 <suiteXmlFile>-->
-                             </configuration>
-                        </plugin>
-
-
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+                 <skipTests>false</skipTests>
+                 <testFailureIgnore>true</testFailureIgnore>
+                 <suiteXmlFiles>
+                        <suiteXmlFile>testngAll.xml</suiteXmlFile>
+                 </suiteXmlFiles>
+            </configuration>
+            </plugin>
         </plugins>
-
     </build>
 
 </project>

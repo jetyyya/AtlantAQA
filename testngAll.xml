@@ -1,0 +1,8 @@
+<suite name="Atlant Tests Suite">
+    <test name="Atlant Tests">
+        <classes>
+            <class name="frontend.mainPage.ElementsMainPageTests" />
+            <class name="frontend.mainPage.ElementsMenuItemTests" />
+        </classes>
+    </test>
+</suite>
