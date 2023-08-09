@@ -19,6 +19,6 @@ public class ElementsMenuItemTests extends BaseTest {
     @Test
     public void discountWorking() {
         elementsMenuItem.getDiscount().click();
-        assertTrue(elementsDiscountPage.getTitle().isDisplayed(), "Сторінка 'Акції' не завантажилась");
+        assertTrue(elementsDiscountPage.getTitle().isDisplayed(), "The \"Promotions\" page did not load");
     }
 }

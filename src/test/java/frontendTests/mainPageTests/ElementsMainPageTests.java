@@ -19,17 +19,17 @@ public class ElementsMainPageTests extends BaseTest {
     }
     @Test
     public void logoPresence(){
-        assertTrue(elementsMainPage.isLogoDisplayed(), "Логотип відсутній");
+        assertTrue(elementsMainPage.isLogoDisplayed(), "The logo is missing");
     }
     @Test
     public void copyrightsPresence(){
         new ScrollToEnd();
-        assertTrue(elementsMainPage.isCopyrightsDisplayed(), "Авторські права відсутні");
+        assertTrue(elementsMainPage.isCopyrightsDisplayed(), "There is no copyright");
     }
     @Test
     public void contactsPresence(){
         new ScrollToEnd();
-        assertTrue(elementsMainPage.isContactsDisplayed(), "Контактний телефон відсутній");
+        assertTrue(elementsMainPage.isContactsDisplayed(), "There is no contact phone number");
     }
 }
 
