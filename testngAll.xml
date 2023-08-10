@@ -4,6 +4,7 @@
         <classes>
             <class name="frontendTests.mainPageTests.ElementsMainPageTests" />
             <class name="frontendTests.mainPageTests.ElementsMenuItemTests" />
+            <class name="frontendTests.headerTests.ElementsHeaderTests" />
         </classes>
     </test>
 </suite>

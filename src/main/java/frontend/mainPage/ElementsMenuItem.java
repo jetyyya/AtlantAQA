@@ -13,4 +13,13 @@ public class ElementsMenuItem {
     public WebElement getDiscount() {
         return driver.findElement(By.cssSelector("a[href=\"/uk/aktsii-uk\"]"));
         }
+    public WebElement getRetail() {
+        return driver.findElement(By.cssSelector("a[href=\"/uk/rozdribnym-pokuptsyam\"]"));
+    }
+    public WebElement getWholesale() {
+        return driver.findElement(By.cssSelector("a[href=\"/uk/optovym-pokuptsyam-uk\"]"));
+    }
+    public WebElement getLoan() {
+        return driver.findElement(By.cssSelector("a[href=\"/uk/kreditovanie-uk/rassrochka-i-kredit-uk\"]"));
+    }
 }
