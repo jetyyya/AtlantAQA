@@ -18,6 +18,7 @@ public class LoginFormTests extends BaseTest {
 
     @Test(priority = 1)
     public void registrationPageLoading() {
+        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getLoginLink().click();
         WaiterVisibilityOf waiterVisibilityOfEmailInput = new WaiterVisibilityOf(driver);
         waiterVisibilityOfEmailInput.waitForVisibility(elementsLoginForm.getRegistrationLink());
@@ -28,6 +29,7 @@ public class LoginFormTests extends BaseTest {
     }
     @Test(priority = 2)
     public void forgotPasswordPageLoading() {
+        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getLoginLink().click();
         elementsLoginForm.getForgotLink().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
@@ -36,6 +38,7 @@ public class LoginFormTests extends BaseTest {
     }
     @Test(priority = 3)
     public void loginEmptyCredentials() {
+        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getLoginLink().click();
         WaiterVisibilityOf waiterVisibilityOfEmailInput = new WaiterVisibilityOf(driver);
         waiterVisibilityOfEmailInput.waitForVisibility(elementsLoginForm.getRegistrationLink());

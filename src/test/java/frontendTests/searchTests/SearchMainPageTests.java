@@ -18,6 +18,7 @@ public class SearchMainPageTests extends BaseTest {
 
     @Test
     public void simpleSearch() {
+        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("intertool");
         elementsMainPage.getSearchButton().click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -27,6 +28,7 @@ public class SearchMainPageTests extends BaseTest {
     }
     @Test
     public void suggestionsSearch() {
+        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("int");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement searchSuggestion = elementsMainPage.getSearchSuggestions();
@@ -35,6 +37,7 @@ public class SearchMainPageTests extends BaseTest {
     }
     @Test
     public void impossibleSearch() {
+        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("sdazszvveswebrzzbebb");
         elementsMainPage.getSearchButton().click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -44,6 +47,7 @@ public class SearchMainPageTests extends BaseTest {
     }
     @Test
     public void emptySearch() {
+        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchButton().click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement searchNullResultsPageTitle = elementsSearchPage.getSearchNullResultsTitle();
