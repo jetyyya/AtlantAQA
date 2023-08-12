@@ -20,7 +20,6 @@ public class ElementsMenuItemTests extends BaseTest {
 
     @Test
     public void discountPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMenuItem.getDiscount().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsDiscountPage.getTitle());
@@ -28,7 +27,6 @@ public class ElementsMenuItemTests extends BaseTest {
     }
     @Test
     public void retailPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMenuItem.getRetail().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsRetailPage.getTitle());
@@ -36,7 +34,6 @@ public class ElementsMenuItemTests extends BaseTest {
     }
     @Test
     public void wholesalePageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMenuItem.getWholesale().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsWholesalePage.getTitle());
@@ -44,7 +41,6 @@ public class ElementsMenuItemTests extends BaseTest {
     }
     @Test
     public void loanPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMenuItem.getLoan().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsLoanPage.getTitle());

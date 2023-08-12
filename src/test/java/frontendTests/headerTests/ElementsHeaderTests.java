@@ -24,7 +24,6 @@ public class ElementsHeaderTests extends BaseTest {
 
     @Test
     public void vacancyPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsHeader.getVacancy().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsVacancyPage.getTitle());
@@ -32,7 +31,6 @@ public class ElementsHeaderTests extends BaseTest {
     }
     @Test
     public void blogPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsHeader.getBlog().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsBlogPage.getTitle());
@@ -40,7 +38,6 @@ public class ElementsHeaderTests extends BaseTest {
     }
     @Test
     public void deliveryPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsHeader.getDelivery().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsDeliveryPage.getTitle());
@@ -48,7 +45,6 @@ public class ElementsHeaderTests extends BaseTest {
     }
     @Test
     public void reviewPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsHeader.getReview().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsReviewPage.getTitle());
@@ -56,7 +52,6 @@ public class ElementsHeaderTests extends BaseTest {
     }
     @Test
     public void contactsPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsHeader.getContacts().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsContactsPage.getTitle());
@@ -64,7 +59,6 @@ public class ElementsHeaderTests extends BaseTest {
     }
     @Test
     public void discountPageLoading() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getRegionSwitchList().click();
         WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
         waiterVisibilityOfTitle.waitForVisibility(elementsMainPage.getRegionSwitchListTitle());

@@ -36,7 +36,7 @@ public class ElementsMainPage {
     }
     public WebElement getSearchSuggestions() {
         WebElement searchSuggestions;
-        searchSuggestions = driver.findElement(By.cssSelector("#search > div > ul > li:nth-child(1)"));
+        searchSuggestions = driver.findElement(By.cssSelector(".live-search"));
         return searchSuggestions;
     }
     public WebElement getLoginLink() {

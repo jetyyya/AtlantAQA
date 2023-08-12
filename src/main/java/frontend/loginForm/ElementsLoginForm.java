@@ -11,16 +11,6 @@ public class ElementsLoginForm {
     public ElementsLoginForm() {
         driver = DriverSingleton.getDriver();
     }
-    public WebElement getEmailInput() {
-        WebElement emailInput;
-        emailInput = driver.findElement(By.cssSelector("#input-email-login"));
-        return emailInput;
-    }
-    public WebElement getPasswordInput() {
-        WebElement passwordButton;
-        passwordButton = driver.findElement(By.cssSelector("#input-password-login"));
-        return passwordButton;
-    }
     public WebElement getLoginButton() {
         WebElement loginButton;
         loginButton = driver.findElement(By.cssSelector(".btn.btn-primary.loginaccount"));
@@ -38,7 +28,7 @@ public class ElementsLoginForm {
     }
     public WebElement getAlertWrongCredentials() {
         WebElement loginAlertWrongCredentials;
-        loginAlertWrongCredentials = driver.findElement(By.cssSelector(".alert.alert-danger"));
+        loginAlertWrongCredentials = driver.findElement(By.cssSelector(".quick-login--register"));
         return loginAlertWrongCredentials;
     }
     }

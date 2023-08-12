@@ -1,14 +1,10 @@
 package frontendTests.searchTests;
 
+import frontend.core.waiters.WaiterVisibilityOf;
 import frontend.mainPage.ElementsMainPage;
 import frontend.searchPage.ElementsSearchPage;
 import frontendTests.BaseTest;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 import static org.testng.Assert.assertTrue;
 
@@ -18,40 +14,32 @@ public class SearchMainPageTests extends BaseTest {
 
     @Test
     public void simpleSearch() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("intertool");
         elementsMainPage.getSearchButton().click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        WebElement searchResultsPageTitle = elementsSearchPage.getSearchResultsTitle();
-        wait.until(ExpectedConditions.visibilityOf(searchResultsPageTitle));
-        assertTrue(searchResultsPageTitle.isDisplayed(), "Page 'Search Result' not displayed");
+        WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
+        waiterVisibilityOfTitle.waitForVisibility(elementsSearchPage.getSearchResultsTitle());
+        assertTrue(elementsSearchPage.getSearchResultsTitle().isDisplayed(), "Page 'Search Result' not displayed");
     }
     @Test
     public void suggestionsSearch() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("int");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        WebElement searchSuggestion = elementsMainPage.getSearchSuggestions();
-        wait.until(ExpectedConditions.visibilityOf(elementsMainPage.getSearchSuggestions()));
-        assertTrue(searchSuggestion.isDisplayed(), "Suggestions is not displayed");
+        WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
+        waiterVisibilityOfTitle.waitForVisibility(elementsMainPage.getSearchSuggestions());
+        assertTrue(elementsMainPage.getSearchSuggestions().isDisplayed(), "Suggestions is not displayed");
     }
     @Test
     public void impossibleSearch() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("sdazszvveswebrzzbebb");
         elementsMainPage.getSearchButton().click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        WebElement searchNullResultsPageTitle = elementsSearchPage.getSearchNullResultsTitle();
-        wait.until(ExpectedConditions.visibilityOf(searchNullResultsPageTitle));
-        assertTrue(searchNullResultsPageTitle.isDisplayed(), "System shows the results when the search is impossible");
+        WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
+        waiterVisibilityOfTitle.waitForVisibility(elementsSearchPage.getSearchNullResultsTitle());
+        assertTrue(elementsSearchPage.getSearchNullResultsTitle().isDisplayed(), "System shows the results when the search is impossible");
     }
     @Test
     public void emptySearch() {
-        driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchButton().click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        WebElement searchNullResultsPageTitle = elementsSearchPage.getSearchNullResultsTitle();
-        wait.until(ExpectedConditions.visibilityOf(searchNullResultsPageTitle));
-        assertTrue(searchNullResultsPageTitle.isDisplayed(), "System shows the results with 'empty' search");
+        WaiterVisibilityOf waiterVisibilityOfTitle = new WaiterVisibilityOf(driver);
+        waiterVisibilityOfTitle.waitForVisibility(elementsSearchPage.getSearchNullResultsTitle());
+        assertTrue(elementsSearchPage.getSearchNullResultsTitle().isDisplayed(), "System shows the results with 'empty' search");
     }
 }
