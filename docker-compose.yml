@@ -6,8 +6,15 @@ services:
       - "4444:4444"
   chrome-node:
     image: selenium/node-chrome:latest
+    shm_size: 4gb
     volumes:
       - /dev/shm:/dev/shm
+    deploy:
+      resources:
+        limits:
+          cpus: "0.8"
+        reservations:
+          memory: 8G
     depends_on:
       - selenium-hub
     environment:
