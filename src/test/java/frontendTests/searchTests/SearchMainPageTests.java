@@ -21,7 +21,7 @@ public class SearchMainPageTests extends BaseTest {
         driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("intertool");
         elementsMainPage.getSearchButton().click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement searchResultsPageTitle = elementsSearchPage.getSearchResultsTitle();
         wait.until(ExpectedConditions.visibilityOf(searchResultsPageTitle));
         assertTrue(searchResultsPageTitle.isDisplayed(), "Page 'Search Result' not displayed");
@@ -30,7 +30,7 @@ public class SearchMainPageTests extends BaseTest {
     public void suggestionsSearch() {
         driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("int");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement searchSuggestion = elementsMainPage.getSearchSuggestions();
         wait.until(ExpectedConditions.visibilityOf(elementsMainPage.getSearchSuggestions()));
         assertTrue(searchSuggestion.isDisplayed(), "Suggestions is not displayed");
@@ -40,7 +40,7 @@ public class SearchMainPageTests extends BaseTest {
         driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchInput().sendKeys("sdazszvveswebrzzbebb");
         elementsMainPage.getSearchButton().click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement searchNullResultsPageTitle = elementsSearchPage.getSearchNullResultsTitle();
         wait.until(ExpectedConditions.visibilityOf(searchNullResultsPageTitle));
         assertTrue(searchNullResultsPageTitle.isDisplayed(), "System shows the results when the search is impossible");
@@ -49,7 +49,7 @@ public class SearchMainPageTests extends BaseTest {
     public void emptySearch() {
         driver.get("https://atlant-shop.com.ua/uk");
         elementsMainPage.getSearchButton().click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement searchNullResultsPageTitle = elementsSearchPage.getSearchNullResultsTitle();
         wait.until(ExpectedConditions.visibilityOf(searchNullResultsPageTitle));
         assertTrue(searchNullResultsPageTitle.isDisplayed(), "System shows the results with 'empty' search");

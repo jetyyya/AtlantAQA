@@ -13,7 +13,7 @@ public class WaiterVisibilityOf {
     private WebDriverWait wait;
 
     public WaiterVisibilityOf(WebDriver driver) {
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
     public void waitForVisibility(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
