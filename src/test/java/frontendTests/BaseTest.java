@@ -14,7 +14,7 @@ public abstract class BaseTest {
         driver = DriverSingleton.getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)).pageLoadTimeout(Duration.ofSeconds(10));
-        driver.get("https://atlant-shop.com.ua/uk");
+        driver.navigate().to("https://atlant-shop.com.ua/uk");
     }
     @AfterSuite
     public void tearDown() {
