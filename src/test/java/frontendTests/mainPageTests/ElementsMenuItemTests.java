@@ -6,7 +6,6 @@ import frontend.mainPage.ElementsMenuItem;
 import frontend.retailPage.ElementsRetailPage;
 import frontend.wholesalePage.ElementsWholesalePage;
 import frontendTests.BaseTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -18,10 +17,6 @@ public class ElementsMenuItemTests extends BaseTest {
     private final ElementsWholesalePage elementsWholesalePage = new ElementsWholesalePage();
     private final ElementsLoanPage elementsLoanPage = new ElementsLoanPage();
 
-    @BeforeMethod
-    public void setup() {
-        driver.get("https://atlant-shop.com.ua/uk");
-    }
     @Test
     public void discountPageLoading() {
         elementsMenuItem.getDiscount().click();

@@ -3,20 +3,13 @@ package frontendTests.mainPageTests;
 import frontend.core.scrolls.ScrollToEnd;
 import frontend.mainPage.ElementsMainPage;
 import frontendTests.BaseTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-
 public class ElementsMainPageTests extends BaseTest {
-
     private final ElementsMainPage elementsMainPage = new ElementsMainPage();
 
-    @BeforeMethod
-    public void setup() {
-        driver.get("https://atlant-shop.com.ua/uk");
-    }
     @Test
     public void logoPresence(){
         assertTrue(elementsMainPage.isLogoDisplayed(), "The logo is missing");

@@ -25,15 +25,33 @@ public class ElementsMainPage {
         return contacts.isDisplayed();
     }
     public WebElement getSearchInput() {
-        WebElement searchInput = driver.findElement(By.cssSelector("input[name=\"search\"]"));
+        WebElement searchInput;
+        searchInput = driver.findElement(By.cssSelector("input[name=\"search\"]"));
         return searchInput;
     }
     public WebElement getSearchButton() {
-        WebElement searchButton = driver.findElement(By.cssSelector(".serach-btn"));
+        WebElement searchButton;
+        searchButton = driver.findElement(By.cssSelector(".serach-btn"));
         return searchButton;
     }
     public WebElement getSearchSuggestions() {
-        WebElement searchSuggestions = driver.findElement(By.cssSelector("#search > div > ul > li:nth-child(1)"));
+        WebElement searchSuggestions;
+        searchSuggestions = driver.findElement(By.cssSelector("#search > div > ul > li:nth-child(1)"));
         return searchSuggestions;
+    }
+    public WebElement getLoginLink() {
+        WebElement loginLink;
+        loginLink = driver.findElement(By.cssSelector(".quick-signup"));
+        return loginLink;
+    }
+    public WebElement getRegionSwitchList() {
+        WebElement regionSwitchList;
+        regionSwitchList = driver.findElement(By.cssSelector(".region-switch-btn.dropdown-toggle"));
+        return regionSwitchList;
+    }
+    public WebElement getRegionSwitchListTitle() {
+        WebElement regionSwitchListTitle;
+        regionSwitchListTitle = driver.findElement(By.cssSelector(".region-switch-list--title"));
+        return regionSwitchListTitle;
     }
 }

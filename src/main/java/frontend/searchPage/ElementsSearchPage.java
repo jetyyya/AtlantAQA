@@ -13,4 +13,9 @@ public class ElementsSearchPage {
     public WebElement getSearchResultsTitle() {
         return driver.findElement(By.cssSelector("h1.page-title.page-h1"));
     }
+    public WebElement getSearchNullResultsTitle() {
+        return driver.findElement(By.cssSelector(".text-empty"));
+    }
+
+
 }

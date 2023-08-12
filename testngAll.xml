@@ -5,6 +5,8 @@
             <class name="frontendTests.mainPageTests.ElementsMainPageTests" />
             <class name="frontendTests.mainPageTests.ElementsMenuItemTests" />
             <class name="frontendTests.headerTests.ElementsHeaderTests" />
+            <class name="frontendTests.searchTests.SearchMainPageTests" />
+            <class name="frontendTests.loginFormTests.LoginFormTests" />
         </classes>
     </test>
 </suite>
